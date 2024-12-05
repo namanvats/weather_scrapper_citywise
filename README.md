@@ -12,6 +12,8 @@ The core functionality encompasses three main areas:
 
 Graphs and Weather Data is hosted here using (FastAPI) : https://weather-city-app-b7e9bff0dd3c.herokuapp.com/
 
+**NOTE**: The development uses **OPEN-METEO API Hourly Weather Data**
+
 ## Setup Guide
 
 ### Requirements
@@ -153,7 +155,7 @@ Deployed: https://weather-city-app-b7e9bff0dd3c.herokuapp.com/data?type=highest_
 - `type` (required): Specifies the graph type
   - Available options: `city_temperature_time`, `highest_temperature_time`, `lowest_humidity_time`, `temperature_city`, `temperature_wind_speed`, `wind_speed_city`
 - `download` (optional): Boolean flag for download behavior
-  - Default: `false`
+  - Default: `false` , Displays Graph in Browser
   - When `true`: Forces file download instead of browser display
 
 **Example Usage**:
@@ -164,6 +166,8 @@ curl "http://127.0.0.1:8000/graphs?type=city_temperature_time"
 # Download wind speed analysis
 curl "http://127.0.0.1:8000/graphs?type=temperature_wind_speed&download=true"
 ```
+
+If required you can host it locally or use deployed URL to fetch the data and graphs directly 
 
 ## Data Organization
 
@@ -186,4 +190,24 @@ The system produces six distinct visualization files in the `Graphs` directory:
 5. `temperature_vs_wind_speed.png`: Temperature-wind speed correlation study
 6. `wind_speed_by_city.png`: City-wise wind speed distribution analysis
 
+### Screenshots
+
+Here are some visual examples of the application in action:
+
+#### API Interface
+![API Root Endpoint](/Screenshots/api-endpoints.png)
+*The root endpoint showing all available API routes*
+
+### Data Visualization
+![Temperature vs Time Graph](Screenshots/city_temp_time_ss.png)
+*Temperature trends across different cities over time*
+
+![City Temperature Analysis](Screenshots/city_temp_ss.png)
+*Distribution of temperature across monitored cities*
+
+### Data Processing
+![Weather Data CSV](Screenshots/extracted_data_ss.png)
+*Sample of processed weather data in CSV format*
+
+--- 
 Feel Free to reach out to : way2naman13@gmail.com (in case of any issues)
