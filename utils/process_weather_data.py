@@ -26,13 +26,13 @@ def process_weather_data(file_name):
     highest_temp_data = []
     for hour in df["Time"].unique():
         hour_df = df[df["Time"] == hour].sort_values(
-            "Temperature (°C)", ascending=False
-        )[["City", "Temperature (°C)"]]
+            "Temperature (°F)", ascending=False
+        )[["City", "Temperature (°F)"]]
         highest_temp_data.append(
             {
                 "Hour": hour,
                 "City": hour_df["City"].iloc[0],
-                "Temperature (°C)": hour_df["Temperature (°C)"].iloc[0],
+                "Temperature (°F)": hour_df["Temperature (°F)"].iloc[0],
             }
         )
     highest_temp_df = pd.DataFrame(highest_temp_data)

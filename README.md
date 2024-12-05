@@ -199,10 +199,10 @@ Here are some visual examples of the application in action:
 *The root endpoint showing all available API routes*
 
 ### Data Visualization
-![Temperature vs Time Graph](Screenshots/city_temp_time_ss.png)
+![Temperature vs Time Graph](Screenshots/city_temp_time_F_ss.png)
 *Temperature trends across different cities over time*
 
-![City Temperature Analysis](Screenshots/city_temp_ss.png)
+![City Temperature Analysis](Screenshots/city_temp_F_ss.png)
 *Distribution of temperature across monitored cities*
 
 ### Data Processing

@@ -22,13 +22,13 @@ def plot_temperature_vs_city(data):
     plt.figure(figsize=(10, 6))
     plt.bar(
         data["City"],
-        data["Temperature (°C)"],
+        data["Temperature (°F)"],
         color="skyblue",
-        label="Temperature (°C)",
+        label="Temperature (°F)",
     )
     plt.xlabel("City")
-    plt.ylabel("Temperature (°C)")
-    plt.title("Temperature (°C) by City")
+    plt.ylabel("Temperature (°F)")
+    plt.title("Temperature (°F) by City")
     plt.xticks(rotation=45, ha="right")
     plt.legend()
     plt.tight_layout()
@@ -42,11 +42,11 @@ def plot_wind_speed_vs_city(data):
     """
     plt.figure(figsize=(10, 6))
     plt.bar(
-        data["City"], data["Wind Speed (m/s)"], color="orange", label="Wind Speed (m/s)"
+        data["City"], data["Wind Speed (mph)"], color="orange", label="Wind Speed (mph)"
     )
     plt.xlabel("City")
-    plt.ylabel("Wind Speed (m/s)")
-    plt.title("Wind Speed (m/s) by City")
+    plt.ylabel("Wind Speed (mph)")
+    plt.title("Wind Speed (mph) by City")
     plt.xticks(rotation=45, ha="right")
     plt.legend()
     plt.tight_layout()
@@ -60,13 +60,13 @@ def plot_temperature_vs_wind_speed(data):
     """
     plt.figure(figsize=(10, 6))
     plt.scatter(
-        data["Temperature (°C)"],
+        data["Temperature (°F)"],
         data["Wind Speed (m/s)"],
         color="green",
         label="Data Points",
     )
-    plt.xlabel("Temperature (°C)")
-    plt.ylabel("Wind Speed (m/s)")
+    plt.xlabel("Temperature (°F)")
+    plt.ylabel("Wind Speed (mph)")
     plt.title("Temperature vs. Wind Speed")
     plt.grid(alpha=0.3)
     plt.legend()
@@ -82,13 +82,13 @@ def plot_highest_temperature_over_time(data):
     plt.figure(figsize=(10, 6))
     plt.plot(
         data["Hour"],
-        data["Temperature (°C)"],
+        data["Temperature (°F)"],
         marker="o",
         color="red",
-        label="Highest Temp (°C)",
+        label="Highest Temp (°F)",
     )
     plt.xlabel("Hour")
-    plt.ylabel("Temperature (°C)")
+    plt.ylabel("Temperature (°F)")
     plt.title("Highest Temperature Over Time")
     plt.grid(alpha=0.3)
     plt.legend()
@@ -130,7 +130,7 @@ def plot_city_temperature_vs_time(data, selected_city=None):
         city_data = data[data["City"] == selected_city]
         plt.plot(
             city_data["Time"],
-            city_data["Temperature (°C)"],
+            city_data["Temperature (°F)"],
             marker="o",
             label=f"{selected_city}",
         )
@@ -140,13 +140,13 @@ def plot_city_temperature_vs_time(data, selected_city=None):
             city_data = data[data["City"] == city]
             plt.plot(
                 city_data["Time"],
-                city_data["Temperature (°C)"],
+                city_data["Temperature (°F)"],
                 marker="o",
                 label=city,
             )
 
     plt.xlabel("Time")
-    plt.ylabel("Temperature (°C)")
+    plt.ylabel("Temperature (°F)")
     plt.title(
         f"City Temperature vs. Time{' - ' + selected_city if selected_city else ''}"
     )
