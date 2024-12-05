@@ -12,7 +12,7 @@ The core functionality encompasses three main areas:
 
 Graphs and Weather Data is hosted here using (FastAPI) : https://weather-city-app-b7e9bff0dd3c.herokuapp.com/
 
-**NOTE**: The development uses **OPEN-METEO API Hourly Weather Data**
+**NOTE**: The development uses **OPEN-METEO API Hourly Weather Data** and ***Black Code Fromatting***
 
 ## Setup Guide
 
