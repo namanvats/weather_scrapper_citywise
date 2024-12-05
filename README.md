@@ -10,14 +10,14 @@ The core functionality encompasses three main areas:
 2. An advanced visualization system that transforms raw data into meaningful graphical insights
 3. A performant FastAPI application that provides programmatic access to both the data and visualizations
 
-Graphs and Weather Data is hosted here using (FASTAPI) : 
+Graphs and Weather Data is hosted here using (FastAPI) : https://weather-city-app-b7e9bff0dd3c.herokuapp.com/
 
 ## Setup Guide
 
 ### Requirements
 
 Before beginning the installation process, ensure your environment meets these prerequisites:
-- Python 3.8 or newer
+- Python 3.10 or newer
 - Package management through `pip`
 
 ### Installation Process
@@ -119,6 +119,7 @@ This makes the service available at `http://127.0.0.1:8000`
 
 #### CSV Data Retrieval
 
+**Base Deployed URL**: https://weather-city-app-b7e9bff0dd3c.herokuapp.com/  
 **Endpoint**: `/data`  
 **Method**: GET  
 **Parameters**:
@@ -130,8 +131,16 @@ This makes the service available at `http://127.0.0.1:8000`
 # Fetch general weather data
 curl "http://127.0.0.1:8000/data?type=weather"
 
+or 
+
+Deployed: https://weather-city-app-b7e9bff0dd3c.herokuapp.com/data?type=weather
+
 # Fetch highest temperature records
 curl "http://127.0.0.1:8000/data?type=highest_temp"
+
+or 
+
+Deployed: https://weather-city-app-b7e9bff0dd3c.herokuapp.com/data?type=highest_temp
 ```
 
 ### Visualization Endpoints
@@ -176,3 +185,5 @@ The system produces six distinct visualization files in the `Graphs` directory:
 4. `temperature_by_city.png`: City-wise temperature distribution analysis
 5. `temperature_vs_wind_speed.png`: Temperature-wind speed correlation study
 6. `wind_speed_by_city.png`: City-wise wind speed distribution analysis
+
+Feel Free to reach out to : way2naman13@gmail.com (in case of any issues)
