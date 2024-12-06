@@ -50,6 +50,9 @@ Install all necessary dependencies:
 pip install -r requirements.txt
 ```
 
+**Logger Setup**  
+In case you don't have `logs` folder present in root directory then add it and create a file named `logs/weather_scrapper.log` in it else it will throw error due to missing logger file. In prod deployment it can be moved to better logging systems like new relic and others.
+
 ### Environment Configuration
 
 The system requires specific environment variables for API integration:
